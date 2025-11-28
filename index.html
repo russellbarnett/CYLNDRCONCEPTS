@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYLNDR MERCH LAUNCH | Creative Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* CYLNDR Primary Palette */
+            --carbon: #0e0d1d;
+            --lead-white: #fff6ec;
+            --catalyst-neon: #eeff00;
+            --oxidized-green: #025f1d;
+            --heat: #ff3800;
+            
+            /* Secondary */
+            --verdigris: #64CCC9;
+            --manganese-violet: #C964CF;
+            
+            /* Tints */
+            --carbon-50: #86868e;
+            --carbon-10: #e7e7e8;
+            --neon-20: #fcffcc;
+            --green-50: #80af8e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--lead-white);
+            color: var(--carbon);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .headline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        /* Two-tone headline style - BOLD light */
+        .split-headline .bold {
+            font-weight: 700;
+            color: var(--carbon);
+        }
+        .split-headline .light {
+            font-weight: 400;
+            color: var(--oxidized-green);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 246, 236, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 1.25rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--carbon);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .nav-logo span {
+            color: var(--heat);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--carbon-50);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--oxidized-green);
+        }
+
+        /* Hero Section - Green with duotone image */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--oxidized-green);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--carbon) 0%, var(--oxidized-green) 100%);
+            opacity: 0.9;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8rem 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 12vw, 8rem);
+            line-height: 0.9;
+            margin-bottom: 2rem;
+            color: var(--lead-white);
+        }
+
+        .hero-title .accent {
+            color: var(--catalyst-neon);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 480px;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .hero-meta strong {
+            color: var(--lead-white);
+            display: block;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        /* Split Section Layout - Cream left, Visual right */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+        }
+
+        .split-left {
+            background: var(--lead-white);
+            padding: 5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .split-left::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--heat);
+        }
+
+        .split-right {
+            background: var(--oxidized-green);
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .split-right.black {
+            background: var(--carbon);
+        }
+
+        .split-right.yellow {
+            background: var(--catalyst-neon);
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--carbon-50);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .section-text {
+            font-size: 0.95rem;
+            color: var(--carbon);
+            line-height: 1.7;
+            max-width: 480px;
+        }
+
+        .section-text strong {
+            font-weight: 600;
+        }
+
+        .section-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .section-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--carbon);
+        }
+
+        .section-list li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--heat);
+            font-weight: 600;
+        }
+
+        /* Full Width Sections */
+        .full-section {
+            padding: 6rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .full-section.green-bg {
+            background: var(--oxidized-green);
+            max-width: none;
+            color: var(--lead-white);
+        }
+
+        .full-section.green-bg .section-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem;
+        }
+
+        .card-cream {
+            background: var(--lead-white);
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .card-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--heat);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* Concept Sections */
+        .concept-section {
+            position: relative;
+        }
+
+        .concept-header-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 60vh;
+        }
+
+        .concept-left {
+            background: var(--lead-white);
+            padding: 5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .concept-left::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--heat);
+        }
+
+        .concept-right {
+            background: var(--oxidized-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .concept-right.alt {
+            background: var(--carbon);
+        }
+
+        .concept-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 10rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.1);
+            line-height: 1;
+        }
+
+        .concept-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--carbon-50);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+
+        .concept-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .concept-tagline {
+            font-size: 1.1rem;
+            color: var(--oxidized-green);
+            font-weight: 400;
+        }
+
+        /* Concept Content */
+        .concept-content {
+            padding: 5rem 4rem;
+            background: var(--lead-white);
+        }
+
+        .concept-content-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Positioning Grid */
+        .positioning-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .positioning-card {
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.02);
+            border-left: 3px solid var(--heat);
+        }
+
+        .positioning-card h4 {
+            font-size: 0.65rem;
+            color: var(--carbon-50);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .positioning-card p {
+            font-size: 0.95rem;
+            color: var(--carbon);
+            line-height: 1.6;
+        }
+
+        /* Mood Board Placeholder */
+        .mood-board-placeholder {
+            background: linear-gradient(135deg, rgba(2,95,29,0.08) 0%, rgba(238,255,0,0.08) 100%);
+            border: 2px dashed rgba(2, 95, 29, 0.25);
+            padding: 5rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .mood-board-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        .mood-board-placeholder h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            color: var(--oxidized-green);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+
+        .mood-board-placeholder p {
+            color: var(--carbon-50);
+            font-size: 0.85rem;
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.85rem;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 1rem;
+            background: var(--oxidized-green);
+            color: var(--lead-white);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            color: var(--carbon);
+        }
+
+        .data-table td strong {
+            font-weight: 600;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(0,0,0,0.02);
+        }
+
+        .data-table .total-row td {
+            background: rgba(2,95,29,0.08);
+            font-weight: 600;
+        }
+
+        /* Content Title */
+        .content-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin: 3rem 0 1.5rem;
+            color: var(--carbon);
+        }
+
+        .content-title .light {
+            font-weight: 400;
+            color: var(--oxidized-green);
+        }
+
+        /* Series Grid */
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .series-item {
+            background: rgba(0,0,0,0.02);
+            padding: 2rem;
+            border-left: 3px solid var(--oxidized-green);
+        }
+
+        .series-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .series-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--carbon);
+        }
+
+        .series-count {
+            background: var(--catalyst-neon);
+            color: var(--carbon);
+            padding: 0.3rem 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .series-description {
+            color: var(--carbon-50);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .series-detail {
+            background: var(--lead-white);
+            padding: 1.25rem;
+            margin-top: 1.25rem;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .series-detail h5 {
+            font-size: 0.6rem;
+            color: var(--heat);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .series-detail ul {
+            list-style: none;
+            font-size: 0.85rem;
+            color: var(--carbon);
+        }
+
+        .series-detail li {
+            padding: 0.3rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .series-detail li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--oxidized-green);
+            font-size: 0.8rem;
+        }
+
+        /* Strengths */
+        .strengths-section {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .strength-item {
+            padding: 0.85rem 1rem;
+            background: rgba(2,95,29,0.06);
+            border-left: 2px solid var(--oxidized-green);
+            font-size: 0.85rem;
+            color: var(--carbon);
+        }
+
+        /* Checklist Table */
+        .checklist-section {
+            padding: 5rem 4rem;
+            background: var(--lead-white);
+        }
+
+        .checklist-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .checklist-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .checklist-table th,
+        .checklist-table td {
+            padding: 0.85rem 1rem;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .checklist-table th {
+            background: var(--carbon);
+            color: var(--lead-white);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        .checklist-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+            color: var(--carbon);
+        }
+
+        .check {
+            color: var(--oxidized-green);
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--oxidized-green);
+            padding: 10rem 3rem;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: var(--lead-white);
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-title .accent {
+            color: var(--catalyst-neon);
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem;
+            text-align: center;
+            background: var(--carbon);
+        }
+
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--lead-white);
+            text-transform: uppercase;
+        }
+
+        .footer-logo span {
+            color: var(--catalyst-neon);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .split-section,
+            .concept-header-split {
+                grid-template-columns: 1fr;
+            }
+            .split-right,
+            .concept-right {
+                min-height: 40vh;
+            }
+            .positioning-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-inner,
+            .split-left,
+            .concept-left,
+            .concept-content,
+            .checklist-section { 
+                padding-left: 1.5rem; 
+                padding-right: 1.5rem; 
+            }
+            .hero-content {
+                padding: 6rem 1.5rem;
+            }
+        }
+
+        /* Page number style */
+        .page-number {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            font-size: 0.75rem;
+            color: var(--carbon-50);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">CYLNDR <span>×</span> BRANDSTUDIOS.AI</a>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#concept-1">Concept 1</a></li>
+                <li><a href="#concept-2">Concept 2</a></li>
+                <li><a href="#concept-3">Concept 3</a></li>
+                <li><a href="#concept-4">Concept 4</a></li>
+                <li><a href="#checklist">Checklist</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-label">Creative Presentation</span>
+            <h1 class="hero-title">CYLNDR<br>MERCH <span class="accent">LAUNCH</span></h1>
+            <p class="hero-subtitle">4 Concept Directions with Full Production Recommendations. Modern content, powered by design.</p>
+            <div class="hero-meta">
+                <div>
+                    <strong>Prepared For</strong>
+                    CYLNDR Studios
+                </div>
+                <div>
+                    <strong>Prepared By</strong>
+                    BrandStudios.AI
+                </div>
+                <div>
+                    <strong>Date</strong>
+                    November 2025
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary - Split Layout -->
+    <section class="split-section" id="overview">
+        <div class="split-left">
+            <span class="section-label">Executive Summary</span>
+            <h2 class="section-title split-headline"><span class="bold">THE CHALLENGE</span> <span class="light">& SOLUTION</span></h2>
+            <p class="section-text">Launch CYLNDR's premium lifestyle merch collection with content that reflects the studio's "makers not talkers" philosophy and design-first approach.</p>
+            <ul class="section-list">
+                <li>40 social videos + 60 e-commerce assets</li>
+                <li>AI-powered content creation</li>
+                <li>48-hour delivery timeline</li>
+                <li>Manifesto aesthetic across every frame</li>
+            </ul>
+        </div>
+        <div class="split-right">
+            <div style="text-align: center; color: var(--lead-white);">
+                <div style="font-family: 'Space Grotesk', sans-serif; font-size: 6rem; font-weight: 700; line-height: 1; margin-bottom: 1rem;">40</div>
+                <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7;">Videos</div>
+                <div style="font-family: 'Space Grotesk', sans-serif; font-size: 6rem; font-weight: 700; line-height: 1; margin: 2rem 0 1rem;">60</div>
+                <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7;">Images</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section style="background: var(--catalyst-neon); padding: 5rem 3rem;">
+        <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+            <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 700; text-transform: uppercase; color: var(--carbon); line-height: 1.2;">
+                "Creativity is most powerful in the hands of thinkers & makers."
+            </p>
+        </div>
+    </section>
+
+    <!-- Brand Foundation -->
+    <section class="split-section">
+        <div class="split-left">
+            <span class="section-label">Brand Foundation</span>
+            <h2 class="section-title split-headline"><span class="bold">CYLNDR</span> <span class="light">VISUAL DNA</span></h2>
+            <p class="section-text">All concepts honor CYLNDR's brand DNA while offering unique positioning and visual approaches.</p>
+            <ul class="section-list">
+                <li><strong>Color:</strong> Oxidized Green, Catalyst Neon, Heat Orange</li>
+                <li><strong>Typography:</strong> Bold condensed uppercase declarations</li>
+                <li><strong>Shapes:</strong> Generative organic forms, scientific abstracts</li>
+                <li><strong>Photography:</strong> Strong figure-to-ground, natural lighting, warm/cool interplay</li>
+            </ul>
+        </div>
+        <div class="split-right black">
+            <div style="color: var(--lead-white); text-align: center;">
+                <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
+                    <span style="color: var(--catalyst-neon);">MODERN</span> CONTENT
+                </div>
+                <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.5rem;">
+                    POWERED BY <span style="color: var(--heat);">DESIGN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Requirements -->
+    <section class="split-section">
+        <div class="split-left">
+            <span class="section-label">Content Requirements</span>
+            <h2 class="section-title split-headline"><span class="bold">SETTING</span> <span class="light">FRAMEWORK</span></h2>
+            <p class="section-text">Five urban environment types required across all concepts. City-agnostic settings that could be any major metro.</p>
+            <ul class="section-list">
+                <li><strong>Urban Streets</strong> — Sidewalks, crosswalks, downtown areas</li>
+                <li><strong>Cafés</strong> — Coffee shops, creative meeting spots</li>
+                <li><strong>Creative Studios</strong> — Edit bays, design spaces, production environments</li>
+                <li><strong>Rooftops</strong> — Urban elevation, cityscape views</li>
+                <li><strong>Parks</strong> — Green spaces, benches, urban nature</li>
+            </ul>
+        </div>
+        <div class="split-right">
+            <div style="color: var(--lead-white); text-align: left; max-width: 320px;">
+                <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.6; margin-bottom: 1.5rem;">Content Mix</div>
+                <div style="margin-bottom: 2rem;">
+                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Lifestyle Moments</div>
+                    <div style="font-size: 0.85rem; opacity: 0.8; line-height: 1.5;">Creators in motion. Authenticity and personality. Not posed.</div>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Product-Driven</div>
+                    <div style="font-size: 0.85rem; opacity: 0.8; line-height: 1.5;">Fabric texture. Stitching quality. Logo details. Macro proof of premium.</div>
+                </div>
+                <div>
+                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem;">Wide ↔ Detail</div>
+                    <div style="font-size: 0.85rem; opacity: 0.8; line-height: 1.5;">Systematic alternation between full-body environment and macro close-ups.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT 1 -->
+    <section class="concept-section" id="concept-1">
+        <div class="concept-header-split">
+            <div class="concept-left">
+                <span class="concept-label">Concept 1</span>
+                <h2 class="concept-title split-headline"><span class="bold">THE MAKERS'</span> <span class="light">STUDIO</span></h2>
+                <p class="concept-tagline">"The Space Where You Actually Work"</p>
+            </div>
+            <div class="concept-right">
+                <span class="concept-number">01</span>
+            </div>
+        </div>
+        
+        <div class="concept-content">
+            <div class="concept-content-inner">
+                <div class="positioning-grid">
+                    <div class="positioning-card">
+                        <h4>What We're Selling</h4>
+                        <p>The environment and mindset of making. Products shown as functional gear for creative studios where real work happens.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Target Audience</h4>
+                        <p>Working creatives who spend their days in studios, editing bays, design spaces. They want clothing that works as hard as they do.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Key Message</h4>
+                        <p>This isn't lifestyle content about creativity—it's functional workwear for the people who actually make things.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Emotional Hook</h4>
+                        <p>"Finally, clothing designed for the space where I actually spend my time."</p>
+                    </div>
+                </div>
+
+                <!-- Mood Board Placeholder -->
+                <div class="mood-board-placeholder">
+                    <div class="icon">◐</div>
+                    <h3>Mood Board — Concept 1</h3>
+                    <p>Tim's visual direction for "The Makers' Studio" concept</p>
+                </div>
+
+                <h3 class="content-title"><span class="bold">SETTING</span> <span class="light">DISTRIBUTION</span></h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Setting Type</th>
+                            <th>Videos</th>
+                            <th>Images</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Urban Streets</strong></td>
+                            <td>8</td>
+                            <td>12</td>
+                            <td>Downtown sidewalks, crosswalks, building entrances</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cafés</strong></td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>Coffee shops, café tables, creative meeting spots</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Creative Studios</strong></td>
+                            <td>14</td>
+                            <td>18</td>
+                            <td>Primary — edit bays, design desks, production spaces</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rooftops</strong></td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>Urban rooftop work sessions, cityscape backdrop</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Parks</strong></td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>Green space transitions, bench moments</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>40</strong></td>
+                            <td><strong>60</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="content-title"><span class="bold">VIDEO</span> <span class="light">SERIES</span></h3>
+                <div class="series-grid">
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Entering Maker Mode"</h4>
+                            <span class="series-count">12 Videos</span>
+                        </div>
+                        <p class="series-description">Transformation sequence showing person putting on CYLNDR piece and entering focused work state.</p>
+                        <div class="series-detail">
+                            <h5>Example Execution</h5>
+                            <ul>
+                                <li>Creator walking downtown street, enters building</li>
+                                <li>Arrives at studio, grabs CYLNDR hoodie</li>
+                                <li>Time-lapse: Day of work compressed</li>
+                                <li>Text: "THE STUDIO" / "WHERE WORK HAPPENS"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"City to Studio"</h4>
+                            <span class="series-count">15 Videos</span>
+                        </div>
+                        <p class="series-description">Lifestyle moments capturing creators in motion through urban environments.</p>
+                        <div class="series-detail">
+                            <h5>Setting Mix</h5>
+                            <ul>
+                                <li>4 videos: Urban street journeys</li>
+                                <li>4 videos: Café moments</li>
+                                <li>3 videos: Rooftop arrivals</li>
+                                <li>4 videos: Park transitions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Maker Declarations"</h4>
+                            <span class="series-count">13 Videos</span>
+                        </div>
+                        <p class="series-description">Split-screen format. Bold typography + footage of makers at work.</p>
+                        <div class="series-detail">
+                            <h5>Example Copy</h5>
+                            <ul>
+                                <li>"WE MAKE THE THING."</li>
+                                <li>"NOT JUST TALK ABOUT IT."</li>
+                                <li>"THAT'S WHAT WE DO."</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strengths-section">
+                    <h3 class="content-title"><span class="bold">WHY THIS</span> <span class="light">WORKS</span></h3>
+                    <div class="strengths-grid">
+                        <div class="strength-item">Most versatile — foundation for ongoing content</div>
+                        <div class="strength-item">Clearest message — "this is workwear for makers"</div>
+                        <div class="strength-item">Authentic to CYLNDR positioning</div>
+                        <div class="strength-item">All five setting types covered</div>
+                        <div class="strength-item">Lifestyle moments in motion throughout</div>
+                        <div class="strength-item">Scales beyond launch indefinitely</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT 2 -->
+    <section class="concept-section" id="concept-2">
+        <div class="concept-header-split">
+            <div class="concept-left">
+                <span class="concept-label">Concept 2</span>
+                <h2 class="concept-title split-headline"><span class="bold">MAKERS</span> <span class="light">OATH</span></h2>
+                <p class="concept-tagline">"Believe in the Work"</p>
+            </div>
+            <div class="concept-right alt">
+                <span class="concept-number">02</span>
+            </div>
+        </div>
+        
+        <div class="concept-content">
+            <div class="concept-content-inner">
+                <div class="positioning-grid">
+                    <div class="positioning-card">
+                        <h4>What We're Selling</h4>
+                        <p>Commitment to craft and professional standards. Products as symbols of believing in quality output.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Target Audience</h4>
+                        <p>Makers who identify strongly with craft values. They see their work as a commitment to doing things right.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Key Message</h4>
+                        <p>This isn't just clothing. It's a statement about how you approach your work and what you believe in.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Emotional Hook</h4>
+                        <p>"I'm part of a community that doesn't take shortcuts and stands behind their work."</p>
+                    </div>
+                </div>
+
+                <div class="mood-board-placeholder">
+                    <div class="icon">◐</div>
+                    <h3>Mood Board — Concept 2</h3>
+                    <p>Tim's visual direction for "Makers Oath" concept</p>
+                </div>
+
+                <h3 class="content-title"><span class="bold">SETTING</span> <span class="light">DISTRIBUTION</span></h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Setting Type</th>
+                            <th>Videos</th>
+                            <th>Images</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Urban Streets</strong></td><td>8</td><td>12</td><td>Downtown conviction moments</td></tr>
+                        <tr><td><strong>Cafés</strong></td><td>6</td><td>10</td><td>Intimate belief statements</td></tr>
+                        <tr><td><strong>Creative Studios</strong></td><td>12</td><td>16</td><td>Oath declarations during work</td></tr>
+                        <tr><td><strong>Rooftops</strong></td><td>8</td><td>12</td><td>Dramatic backdrop for statements</td></tr>
+                        <tr><td><strong>Parks</strong></td><td>6</td><td>10</td><td>Contemplative moments</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL</strong></td><td><strong>40</strong></td><td><strong>60</strong></td><td></td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="content-title"><span class="bold">VIDEO</span> <span class="light">SERIES</span></h3>
+                <div class="series-grid">
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"We Believe" Manifesto</h4>
+                            <span class="series-count">10 Videos</span>
+                        </div>
+                        <p class="series-description">Bold typography declarations dissolving to reveal makers embodying beliefs.</p>
+                        <div class="series-detail">
+                            <h5>Belief Themes</h5>
+                            <ul>
+                                <li>"WE BELIEVE IN PREPARATION"</li>
+                                <li>"WE BELIEVE IN CRAFT"</li>
+                                <li>"WE BELIEVE IN THE WORK"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"The Oath"</h4>
+                            <span class="series-count">15 Videos</span>
+                        </div>
+                        <p class="series-description">Portrait-style videos of makers stating personal professional oaths.</p>
+                        <div class="series-detail">
+                            <h5>Oath Declarations</h5>
+                            <ul>
+                                <li>"I DON'T TAKE SHORTCUTS."</li>
+                                <li>"I RESPECT THE CRAFT."</li>
+                                <li>"I BELIEVE IN THE WORK."</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Evidence of Belief"</h4>
+                            <span class="series-count">15 Videos</span>
+                        </div>
+                        <p class="series-description">Before/after transformations showing what happens when you follow maker values.</p>
+                    </div>
+                </div>
+
+                <div class="strengths-section">
+                    <h3 class="content-title"><span class="bold">WHY THIS</span> <span class="light">WORKS</span></h3>
+                    <div class="strengths-grid">
+                        <div class="strength-item">Strongest emotional connection</div>
+                        <div class="strength-item">Most distinctive positioning (movement)</div>
+                        <div class="strength-item">Typography-forward approach</div>
+                        <div class="strength-item">Highly shareable content</div>
+                        <div class="strength-item">Excellent for user-generated content</div>
+                        <div class="strength-item">All five setting types represented</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT 3 -->
+    <section class="concept-section" id="concept-3">
+        <div class="concept-header-split">
+            <div class="concept-left">
+                <span class="concept-label">Concept 3</span>
+                <h2 class="concept-title split-headline"><span class="bold">BUILT BY</span> <span class="light">MAKERS</span></h2>
+                <p class="concept-tagline">"Made for the Makers"</p>
+            </div>
+            <div class="concept-right">
+                <span class="concept-number">03</span>
+            </div>
+        </div>
+        
+        <div class="concept-content">
+            <div class="concept-content-inner">
+                <div class="positioning-grid">
+                    <div class="positioning-card">
+                        <h4>What We're Selling</h4>
+                        <p>Credibility and understanding. CYLNDR designed this for themselves because they ARE makers.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Target Audience</h4>
+                        <p>Makers skeptical of brands that don't "get it." They want products designed by people who do the work.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Key Message</h4>
+                        <p>This isn't a brand selling to creatives. It's makers sharing what they made for themselves.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Emotional Hook</h4>
+                        <p>"Finally, someone who actually understands what I need because they need it too."</p>
+                    </div>
+                </div>
+
+                <div class="mood-board-placeholder">
+                    <div class="icon">◐</div>
+                    <h3>Mood Board — Concept 3</h3>
+                    <p>Tim's visual direction for "Built By Makers" concept</p>
+                </div>
+
+                <h3 class="content-title"><span class="bold">SETTING</span> <span class="light">DISTRIBUTION</span></h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Setting Type</th>
+                            <th>Videos</th>
+                            <th>Images</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Urban Streets</strong></td><td>6</td><td>10</td><td>Real-world testing</td></tr>
+                        <tr><td><strong>Cafés</strong></td><td>8</td><td>12</td><td>Third-space versatility</td></tr>
+                        <tr><td><strong>Creative Studios</strong></td><td>14</td><td>20</td><td>Design process, maker perspective</td></tr>
+                        <tr><td><strong>Rooftops</strong></td><td>6</td><td>8</td><td>Outdoor work sessions</td></tr>
+                        <tr><td><strong>Parks</strong></td><td>6</td><td>10</td><td>Versatility proof</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL</strong></td><td><strong>40</strong></td><td><strong>60</strong></td><td></td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="content-title"><span class="bold">VIDEO</span> <span class="light">SERIES</span></h3>
+                <div class="series-grid">
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"From The Makers"</h4>
+                            <span class="series-count">12 Videos</span>
+                        </div>
+                        <p class="series-description">Documentary-style content showing design decisions and thinking behind each piece.</p>
+                        <div class="series-detail">
+                            <h5>Example</h5>
+                            <ul>
+                                <li>"WE TESTED 12 DIFFERENT WEIGHTS."</li>
+                                <li>"WE PICKED THE ONE THAT WORKS EVERYWHERE."</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Maker to Maker"</h4>
+                            <span class="series-count">15 Videos</span>
+                        </div>
+                        <p class="series-description">Direct-to-camera explanations from makers explaining specific design choices.</p>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"In Maker Hands"</h4>
+                            <span class="series-count">13 Videos</span>
+                        </div>
+                        <p class="series-description">Products being used in actual scenarios. Real usage, not styled.</p>
+                    </div>
+                </div>
+
+                <div class="strengths-section">
+                    <h3 class="content-title"><span class="bold">WHY THIS</span> <span class="light">WORKS</span></h3>
+                    <div class="strengths-grid">
+                        <div class="strength-item">Strongest credibility play</div>
+                        <div class="strength-item">Most transparent approach</div>
+                        <div class="strength-item">Shows "why" behind decisions</div>
+                        <div class="strength-item">Educational content value</div>
+                        <div class="strength-item">Peer-to-peer positioning</div>
+                        <div class="strength-item">Builds trust through transparency</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT 4 -->
+    <section class="concept-section" id="concept-4">
+        <div class="concept-header-split">
+            <div class="concept-left">
+                <span class="concept-label">Concept 4</span>
+                <h2 class="concept-title split-headline"><span class="bold">MAKERS</span> <span class="light">MARK</span></h2>
+                <p class="concept-tagline">"Built for Now. Lasts Until the Trend Comes Back Around."</p>
+            </div>
+            <div class="concept-right alt">
+                <span class="concept-number">04</span>
+            </div>
+        </div>
+        
+        <div class="concept-content">
+            <div class="concept-content-inner">
+                <div class="positioning-grid">
+                    <div class="positioning-card">
+                        <h4>What We're Selling</h4>
+                        <p>Permanence and timeless quality. Products that outlast trend cycles through staying power.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Target Audience</h4>
+                        <p>Makers tired of fast fashion. They want investment pieces that last years and never look dated.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Key Message</h4>
+                        <p>Trends come and go. Quality and craft are permanent. Built to outlast the noise.</p>
+                    </div>
+                    <div class="positioning-card">
+                        <h4>Emotional Hook</h4>
+                        <p>"I'm done buying disposable clothing. I want pieces relevant in 5 years."</p>
+                    </div>
+                </div>
+
+                <div class="mood-board-placeholder">
+                    <div class="icon">◐</div>
+                    <h3>Mood Board — Concept 4</h3>
+                    <p>Tim's visual direction for "Makers Mark" concept</p>
+                </div>
+
+                <h3 class="content-title"><span class="bold">SETTING</span> <span class="light">DISTRIBUTION</span></h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Setting Type</th>
+                            <th>Videos</th>
+                            <th>Images</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Urban Streets</strong></td><td>8</td><td>12</td><td>Timeless urban backdrops</td></tr>
+                        <tr><td><strong>Cafés</strong></td><td>6</td><td>10</td><td>Classic third spaces, heritage feel</td></tr>
+                        <tr><td><strong>Creative Studios</strong></td><td>10</td><td>14</td><td>Maker permanence</td></tr>
+                        <tr><td><strong>Rooftops</strong></td><td>10</td><td>14</td><td>Timeless cityscapes</td></tr>
+                        <tr><td><strong>Parks</strong></td><td>6</td><td>10</td><td>Natural permanence</td></tr>
+                        <tr class="total-row"><td><strong>TOTAL</strong></td><td><strong>40</strong></td><td><strong>60</strong></td><td></td></tr>
+                    </tbody>
+                </table>
+
+                <h3 class="content-title"><span class="bold">VIDEO</span> <span class="light">SERIES</span></h3>
+                <div class="series-grid">
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Materiality"</h4>
+                            <span class="series-count">12 Videos</span>
+                        </div>
+                        <p class="series-description">Extreme close-up films showing material quality. Product as art object.</p>
+                        <div class="series-detail">
+                            <h5>Example</h5>
+                            <ul>
+                                <li>Extreme close-up of cotton weave</li>
+                                <li>Text: "380 GSM HEAVYWEIGHT COTTON"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Timeline"</h4>
+                            <span class="series-count">10 Videos</span>
+                        </div>
+                        <p class="series-description">Show trend cycles while CYLNDR pieces remain constant and relevant.</p>
+                        <div class="series-detail">
+                            <h5>Key Copy</h5>
+                            <ul>
+                                <li>"BUILT FOR NOW"</li>
+                                <li>"LASTS UNTIL THE TREND COMES BACK AROUND"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Heritage Moments"</h4>
+                            <span class="series-count">10 Videos</span>
+                        </div>
+                        <p class="series-description">Cinematic films evoking timelessness through setting, lighting, atmosphere.</p>
+                    </div>
+                    <div class="series-item">
+                        <div class="series-header">
+                            <h4 class="series-title">"Design Philosophy"</h4>
+                            <span class="series-count">8 Videos</span>
+                        </div>
+                        <p class="series-description">Typography-led explaining design through permanence lens.</p>
+                        <div class="series-detail">
+                            <h5>Example</h5>
+                            <ul>
+                                <li>"WE CHOSE BLACK"</li>
+                                <li>"BECAUSE IT'S PERMANENT."</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strengths-section">
+                    <h3 class="content-title"><span class="bold">WHY THIS</span> <span class="light">WORKS</span></h3>
+                    <div class="strengths-grid">
+                        <div class="strength-item">Highest premium positioning</div>
+                        <div class="strength-item">Most distinctive aesthetic</div>
+                        <div class="strength-item">Clearest anti-fast-fashion message</div>
+                        <div class="strength-item">Best tagline</div>
+                        <div class="strength-item">Museum-quality aesthetic</div>
+                        <div class="strength-item">Justifies premium pricing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="checklist-section" id="checklist">
+        <div class="checklist-inner">
+            <span class="section-label">Verification</span>
+            <h2 class="section-title split-headline"><span class="bold">CONTENT</span> <span class="light">REQUIREMENTS</span></h2>
+            
+            <table class="checklist-table">
+                <thead>
+                    <tr>
+                        <th>Requirement</th>
+                        <th>Concept 1</th>
+                        <th>Concept 2</th>
+                        <th>Concept 3</th>
+                        <th>Concept 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Urban Streets</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Cafés</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Creative Studios</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Rooftops</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Parks</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Lifestyle in Motion</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Authenticity/Personality</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Fabric Close-ups</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Stitching Close-ups</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Logo Close-ups</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                    <tr><td>Wide ↔ Detail Alternation</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">READY TO<br><span class="accent">MAKE</span> THE THING.</h2>
+            <p class="cta-text">All concepts ready for immediate production upon selection.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">BRAND<span>STUDIOS</span>.AI</div>
+    </footer>
+
+</body>
+</html>
